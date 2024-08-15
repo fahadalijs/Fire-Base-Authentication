@@ -4,24 +4,23 @@ import { auth } from "./configue.js";
 
 
 
-const from = document.querySelector("#form");
+const form = document.querySelector("#form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 
-from.addEventListener('submit' , (event) =>{
-    event.preventDefault();  
-    signInWithEmailAndPassword(auth, email.value , password.value)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log(user);
-      window.location = 'home.html'
-     })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorMessage);
-    });
-  
-
-})
-
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    signInWithEmailAndPassword(auth, email.value, password.value)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+            email.value = "";
+            password.value = "";
+            window.location = 'home.html';
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorMessage);
+        });
+});

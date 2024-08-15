@@ -15,9 +15,9 @@ from.addEventListener('submit' , (event) =>{
     // Signed up 
     const user = userCredential.user;
     console.log(user);
-    email.value = ' '
-    password.value = ' '
-  })
+    email.value = "";
+    password.value = "";
+})
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;

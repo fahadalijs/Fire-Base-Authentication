@@ -50,8 +50,8 @@ async function getDataFromFirestore (){
             <div class="card-body">
                 <p><span class="h4">Tittle:</span>${item.tittle}</p>
                 <p><span class="h4">Discription:</span>${item.discription}</p>
-                <button type="button" id = "delete" class="btn btn-danger">Danger</button>
-                <button type="button" id = "update" class="btn btn-info">Info</button>
+                <button type="button" id = "delete" class="btn btn-danger">Delete</button>
+                <button type="button" id = "update" class="btn btn-info">Edit</button>
 
 
             </div>
