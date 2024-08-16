@@ -16,7 +16,7 @@ form.addEventListener('submit', (event) => {
             console.log(user);
             email.value = "";
             password.value = "";
-            window.location = 'home.html';
+            window.location = 'Dashboard.html';
         })
         .catch((error) => {
             const errorCode = error.code;
